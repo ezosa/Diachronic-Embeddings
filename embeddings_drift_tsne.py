@@ -11,44 +11,6 @@ from matplotlib import collections as mc
 
 
 model_years = ['1860','1880','1900']
-
-#words_path = "FI_out/ism_fi_reverse.txt"
-#words_data = open(words_path,'rb').read().decode('utf-8').split("\n")
-#words = [w.split() for w in words_data]
-#words = [w[0] for w in words if len(w)>0 and len(w[0])>4]
-#ism_words = list(set(words))
-
-# words_path = 'SV_out/korp.json'
-# words_json = json.load(open(words_path, 'rb'))
-# corp = words_json['corpora']
-# keys = list(corp.keys())
-# words = []
-# for k in keys:
-#     w = list(corp[k]['relative'].keys())
-#     words.extend(w)
-# words = [w.lower() for w in words if len(w) > 3]
-# words = [w.replace('\x84', '') for w in words]
-# ism_words = list(set(words))
-
-# common_words = []
-# print("Getting words common to all time slices")
-# for year_index in range(len(model_years)):
-#     print("Year: ", model_years[year_index])
-#     path = 'FI_out/model_fi_'+model_years[year_index]+'.w2v'
-#     model = Word2Vec.load(path)
-#     vocab = list(model.wv.vocab.keys())
-#     ism_words_in_year = [w for w in ism_words if w in vocab]
-#     common_words.append(ism_words_in_year)
-#
-# target_words = common_words[0]
-# for i in range(1,len(model_years)-1):
-#     target_words = set(target_words).intersection(set(common_words[i]))
-# target_words = list(set(target_words))
-
-#target_words = ['liberalismen', 'liberalism', 'fanatism', 'fanatismen', 'despotism', 'magnetismen', 'patriotism', 'egoism', 'despotismens', 'despotismen']
-#target_words = ['modern','finsk','konduktören']
-#target_words = ['kronstadt','kartio']
-
 target_words = ['flygare', 'finska', 'patriotism']
 main_path = "/home/local/pivovaro/NewsEye/diachronic_embeddings/models/SV_lowercase/model_sv_"
 
@@ -96,10 +58,7 @@ for target in target_words:
         df['tsne-two'] = tsne_results[:,1]
         plt.clf()
         plt.figure(figsize=(16,10))
-        # scatterplot the two principal components
         n_colors = len(list(set(df['type'])))
-        #print("colors: ", n_colors)
-        #print(df)
         ax = sns.scatterplot(
             x='tsne-one', y='tsne-two',
             hue='type', s=50,
@@ -131,6 +90,5 @@ for target in target_words:
         lc = mc.LineCollection(lines, linewidths=1)
         ax.add_collection(lc)
         fig = ax.get_figure()
-#        fig.savefig('FI_out/plots/tsne_'+target+'.png')
         fig.savefig('tsne_'+target+'.png')
         plt.close()
