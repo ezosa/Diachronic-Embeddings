@@ -12,7 +12,7 @@ from matplotlib import collections as mc
 
 model_years = ['1860','1880','1900']
 target_words = ['flygare', 'finska', 'patriotism']
-main_path = "/home/local/pivovaro/NewsEye/diachronic_embeddings/models/SV_lowercase/model_sv_"
+main_path = "../models/SV_lowercase/model_sv_"
 
 #plot each target word across all timeslices
 print("target words: ", len(target_words))
