@@ -15,7 +15,7 @@ We used an incremental training method, closely following (Kim et al., 2014) and
 
 ## Clustering
 
-Once you obtained enbeddings you can apply clustering using ```clustering.py``` (clustering of selected words) or ```cluster_all.py``` (enriched clustering).
+Once you obtained embeddings you can apply clustering using ```clustering.py``` (clustering of selected words) or ```cluster_all.py``` (enriched clustering).
 
 Currently the code uses hard-coded links to models and hardcoded list of words.
 
@@ -24,7 +24,7 @@ Currently the code uses hard-coded links to models and hardcoded list of words.
 
 The clustering outputs json files that can be used to make Sankey chart using ```diachronic_shift_sankey.py```. 
 
-Selected enbeddings could be also vizualized using ```embeddings_drift_tsne.py```.
+Selected embeddings could be also vizualized using ```embeddings_drift_tsne.py```.
 
 The code currently uses hard-coded paths.
 
