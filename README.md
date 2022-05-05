@@ -2,6 +2,10 @@
 
 This is code that was used in our recent work on clustering of diachronic word embeddings: 
 
+
+Marjanen, J., Kurunmäki, J. A., Pivovarova, L., & Zosa, E. (2020). The expansion of isms, 1820-1917: Data-driven analysis of political language in digitized newspaper collections. Journal of Data Mining and Digital Humanities. <https://doi.org/10.46298/jdmdh.6159>
+
+
 Pivovarova, L., Marjanen, J., & Zosa, E. (2019). Word Clustering for Historical Newspapers Analysis. In Ranlp Workshop on Language technology for Digital Humanities.
 
 Marjanen, J., Pivovarova, L., Zosa, E., & Kurunmäki, J. (2019). Clustering ideological terms in historical newspaper data with diachronic word embeddings. In 5th International Workshop on Computational History, HistoInformatics 2019. CEUR-WS.
